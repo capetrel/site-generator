@@ -1,0 +1,70 @@
+@import "variables";
+@import "elements";
+@import "menu";
+
+body, html {
+  margin:0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  &:visited{
+    color: inherit;
+  }
+}
+body {
+  font-family: LibreFranklin, sans-serif;
+  background-color: $white;
+  color: $text;
+}
+
+.error-message,
+.success-message {
+  width: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: $space1 0;
+  padding: $space1 - 10;
+}
+
+.success-message {
+  background-color: $success;
+}
+
+.error-message {
+  background-color: $error;
+}
+
+#closeFlash {
+  cursor: pointer;
+}
+
+.container {
+  padding: ($space1 + 10) 0;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: $main-color;
+  .header {
+    padding: ($space1 * 2) 0;
+  }
+  h1 {
+    margin: 0;
+    padding: $space1 0;
+  }
+}
+
+
+footer {
+  padding: $space1 * 3 0;
+  text-align: center;
+  color: $white;
+  background-color: $gray4;
+}

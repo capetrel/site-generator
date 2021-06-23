@@ -1,0 +1,11 @@
+# Globale Ignore
+/.idea
+/.vscode
+**/._*
+.DS_Store
+vendor
+node_modules
+
+# Ignore all generated project file and conserve folder if empty
+/web/*
+!/web/.gitkeep

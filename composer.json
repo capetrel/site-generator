@@ -1,0 +1,21 @@
+{
+    "name": "efil/pdftohtml",
+    "description": "G\u0000n\u0000re des fichiers php \u0000 partir de l'export html d'un fichier PDF",
+    "authors": [
+        {
+            "name": "capetrel",
+            "email": "capetrelluzzi@efil.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "classes"
+        }
+    },
+    "require": {
+        "masterminds/html5": "^2.7"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    }
+}

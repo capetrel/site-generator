@@ -1,0 +1,24 @@
+# Run Php without filename extension v2 with https only
+# <IfModule mod_rewrite.c>
+#     RewriteEngine on
+#     # To externally redirect /dir/file.php to /dir/file
+#     RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+#     # réécriture des liens PHP en HTTPS :
+#     RewriteRule ^ https://%{HTTP_HOST}/%1 [R=301,NE,L]
+#     ## To internally rewrite /dir/file to /dir/file.php
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_FILENAME}.php -f
+#     RewriteRule ^(.+?)/?$ $1.php [L]
+# </IfModule>
+
+# Run Php without filename extension v2 with x-forwarded-for
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    # To externally redirect /dir/file.php to /dir/file
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+    RewriteRule %{HTTP:X-FORWARDED-FOR}^/%1 [R=301,NE,L]
+    ## To internally rewrite /dir/file to /dir/file.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+?)/?$ $1.php [L]
+</IfModule>

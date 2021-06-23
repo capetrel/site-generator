@@ -1,0 +1,4 @@
+<FilesMatch "\.(json|lock|md|gitignore)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>

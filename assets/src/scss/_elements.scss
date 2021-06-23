@@ -1,0 +1,19 @@
+button {
+  background-color: $secondary-color;
+  padding: $space1 - 10;
+  color: $text;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  margin: ($space1 - 10) 0;
+}
+
+.block {
+  max-width: 200px;
+  text-align: left;
+  .block-title {
+    font-size: $size1 + 6;
+    font-weight: bold;
+    margin-bottom: $space1 - 10;
+  }
+}
